@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pyramid Pattern</title>
+</head>
+<body>
+  <pre id="output"></pre> <!-- Where the pyramid will appear -->
+
+  <script>
+    let rows = parseInt(prompt("Enter number of rows: "));
+    let result = "";
+
+    for (let i = 1; i <= rows; i++) {
+      // Add spaces before stars
+      for (let space = 1; space <= rows - i; space++) {
+        result += " ";
+      }
+
+      // Add stars
+      for (let star = 1; star <= (2 * i - 1); star++) {
+        result += "*";
+      }
+
+      // New line
+      result += "\n";
+    }
+
+    document.getElementById("output").innerText = result;
+  </script>
+</body>
+</html>

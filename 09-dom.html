@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<body>
+    <p>to get a job</p>
+
+    <button onclick="subscribe()" class="b1">subscribe</button>
+
+    <BR>
+    <P>Amazon shipping caculator</P>
+    </BR>
+    <input placeholder="cost of shiping" id="shippingvalue">
+
+    <button onclick="claculaTotal()" class="b2"> calculate</button>
+    <p id="result"></p>
+    <script>
+
+        function claculaTotal() {
+            const inputElement = document.querySelector('#shippingvalue')
+            let cost = Number(inputElement.value);
+            console.log("sdd", cost)
+            if (cost < 40) {
+                cost = cost + 10;
+                console.log(cost)
+            }
+            const resultElement = document.querySelector('#result');
+            resultElement.textContent = "Final cost: ₹" + cost;
+
+        }
+        function subscribe() {
+            const buttonElemnet = document.querySelector('.b1');
+            if (buttonElemnet.innerHTML === 'subscribe') {
+                buttonElemnet.innerHTML = 'subscribed'
+            } else {
+                buttonElemnet.innerHTML = 'subscribe'
+            }
+
+        }
+    </script>
+</body>
+</head>
+
+</html>
