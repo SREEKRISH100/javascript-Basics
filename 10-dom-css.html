@@ -2,11 +2,32 @@
 <html>
 
 <head>
+<style>
+    .b1{
+        border: none;
+        background-color:black;
+        color: white;
+       padding-top:10px ;
+       padding-bottom: 10px;
+       padding-left:15px;
+       padding-right:15px;
+       font-weight: bold;
+       border-radius: 500px;
+    }
+    .is-subscribed{
+        background-color: gray;
+        color: black;
+    }
 
+    body{
+        font-family: Arial, Helvetica, sans-ser if;
+    }
+
+</style>
 <body>
     <p>to get a job</p>
 
-    <button onclick="subscribe()" class="b1">subscribe</button>
+    <button onclick="subscribe()" title="sub for more deatiles" class="b1">subscribe</button>
 
     <BR>
     <P>Amazon shipping caculator</P>
@@ -36,9 +57,11 @@ function handleCostKeydown(){
         function subscribe() {
             const buttonElemnet = document.querySelector('.b1');
             if (buttonElemnet.innerHTML === 'subscribe') {
-                buttonElemnet.innerHTML = 'subscribed'
+                buttonElemnet.innerHTML = 'subscribed';
+                buttonElemnet.classList.add('is-subscribed')
             } else {
-                buttonElemnet.innerHTML = 'subscribe'
+                buttonElemnet.innerHTML = 'subscribe';
+                buttonElemnet.classList.remove('is-subscribed')
             }
 
         }
